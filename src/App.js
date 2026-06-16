@@ -102,17 +102,6 @@ export default function App() {
       .then((res) => res.json())
       .then((data) => dispatch({ type: "dataReceived", payload: data }))
       .catch((err) => dispatch({ type: "dataFailed" }));
-
-    // async function fetchQuestions() {
-    //   try {
-    //     const res = await fetch(`http://localhost:8000/questions`);
-    //     const data = await res.json();
-    //     dispatch({ type: "dataReceived", payload: data });
-    //   } catch (error) {
-    //     dispatch({ type: "dataFailed" });
-    //   }
-    // }
-    // fetchQuestions();
   }, []);
 
   return (
