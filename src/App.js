@@ -11,6 +11,13 @@ import FinishedScreen from "./components/FinishedScreen";
 import Footer from "./components/Footer";
 import Timer from "./components/Timer";
 
+/**
+ * pins:
+ * pin1
+ * pin2: have the high score store in the questions.json file , so we can track a users/the highest score for this quiz and show them at the end.
+ * pin3: users can select the number of questions they want to answer at the start also the difficulty of the questions
+ */
+
 const SEC_PER_QUESTION = 30;
 
 const initialState = {
@@ -19,6 +26,7 @@ const initialState = {
   status: "loading",
   // we need individual questions, on clicking on Let's start btn, it should start with the first question in the array
   index: 0,
+  // pin1: array of answers so user can go back and forth to check and recheck their answers
   answer: null,
   points: 0,
   highscore: 0,
